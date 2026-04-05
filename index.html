@@ -733,12 +733,12 @@ const CONFIG = {
     },
     {
       title:    "NaijaSenti — Nigerian Twitter Sentiment Analysis",
-      status:   "progress",
+      status:   "deployed",
       featured: false,
       desc:     "Four-model NLP comparison on Nigerian Twitter data across Hausa, Igbo, Pidgin, and Yorùbá. Benchmarks Logistic Regression, SimpleRNN, and LSTM against fine-tuned AfroXLMR transformer. Includes rigorous data leakage detection and language-specific preprocessing.",
       metrics:  [
         { val: "0.69",  key: "LogReg F1" },
-        { val: "0.68",  key: "RNN F1" },
+        { val: "0.69",  key: "RNN F1" },
         { val: "4",     key: "Languages" },
       ],
       stack:    ["PyTorch", "TensorFlow/Keras", "HuggingFace", "AfroXLMR", "LSTM", "RNN"],
