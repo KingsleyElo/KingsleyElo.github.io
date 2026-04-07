@@ -705,8 +705,8 @@ const CONFIG = {
   /* ── Roadmap ────────────────────────────────────────── */
   roadmap: [
     { text: "Credit Risk — XGBoost + Flask + Docker", done: true },
-    { text: "NaijaSenti — Transformer fine-tuning (NLP)", active: true },
-    { text: "Fraud Detection — PyTorch + AWS Lambda + FastAPI + MLflow" },
+    { text: "NaijaSenti — Transformer fine-tuning (NLP)", done: true },
+    { text: "Fraud Detection — PyTorch + AWS Lambda + FastAPI + MLflow", active: true },
     { text: "Churn Prediction — Kubernetes" },
     { text: "Retrofit MLflow + Evidently + GitHub Actions on Credit Risk" },
     { text: "Cold email campaign — Target: May 2026" },
@@ -737,13 +737,14 @@ const CONFIG = {
       featured: false,
       desc:     "Four-model NLP comparison on Nigerian Twitter data across Hausa, Igbo, Pidgin, and Yorùbá. Benchmarks Logistic Regression, SimpleRNN, and LSTM against fine-tuned AfroXLMR transformer. Includes rigorous data leakage detection and language-specific preprocessing.",
       metrics:  [
+        { val: "0.74",  key: "AfroXLMR F1" },
         { val: "0.69",  key: "LogReg F1" },
         { val: "0.69",  key: "RNN F1" },
         { val: "4",     key: "Languages" },
       ],
       stack:    ["PyTorch", "TensorFlow/Keras", "HuggingFace", "AfroXLMR", "LSTM", "RNN"],
       github:   "https://github.com/KingsleyElo/naija-sentiment",
-      demo:     "",
+      demo:     "https://huggingface.co/spaces/KingsleyElo/naija-sentiment",
     },
     {
       title:    "Nigeria Housing Price Prediction",
