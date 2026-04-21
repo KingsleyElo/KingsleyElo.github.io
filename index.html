@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Kingsley Eloebhose — ML Engineer</title>
+<title>Kingsley Eloebhose - ML Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
@@ -679,27 +679,27 @@ const CONFIG = {
   /* ── Personal Info ─────────────────────────────────── */
   name:     "Kingsley Eloebhose",
   role:     "Machine Learning Engineer",
-  tagline:  "Credit Risk · NLP · Fintech",
+  tagline:  "NLP · Credit Risk · Fintech",                          /* UPDATED */
   location: "Lagos, Nigeria",
   email:    "eloebhosekingsley@outlook.com",
   github:   "https://github.com/KingsleyElo",
   linkedin: "https://www.linkedin.com/in/kingsley-eloebhose-77ab41379",
   twitter:  "https://twitter.com/elo_kingsley",
-  resume:   "https://drive.google.com/file/d/13KiO_pAp_qHXlV2pEXeezvmWhpAdIqXa/view?usp=sharing", // Replace with your hosted resume PDF link
+  resume:   "https://drive.google.com/file/d/13KiO_pAp_qHXlV2pEXeezvmWhpAdIqXa/view?usp=sharing",
 
   /* ── Hero Stats ────────────────────────────────────── */
-  stats: [
-    { num: "3+",    label: "Years in data" },
-    { num: "0.72",  label: "AUC — Credit Risk" },
-    { num: "₦134M", label: "Estimated NPL savings modelled" },
-    { num: "4",     label: "ML projects" },
-  ],
+   stats: [
+     { num: "3+",   label: "Years in data" },
+     { num: "0.74", label: "F1 — AfroXLMR" },
+     { num: "4",    label: "Languages — AfroXLMR fine-tuned" },
+     { num: "4",    label: "ML projects" },
+   ],
 
   /* ── About ─────────────────────────────────────────── */
-  about: [
-    "I'm a Data Analyst with 3+ years of professional experience, transitioning into <strong>Machine Learning Engineering</strong> through deliberate, hands-on project work. My background is in fintech and real estate analytics; my focus now is building production-grade ML systems.",
-    "I work primarily in <strong>Python</strong> with Scikit-learn, XGBoost, PyTorch, and TensorFlow. I deploy with <strong>Flask and Docker</strong>, manage pipelines with Airflow, and I'm currently working through ML Zoomcamp to add serverless and MLOps to my stack.",
-    "My target is a <strong>Machine Learning Engineering role at a Nigerian fintech</strong> — Moniepoint, Kuda, Carbon, FairMoney, or similar — using that as the launchpad for international remote roles.",
+  about: [                                                           /* UPDATED */
+    "I'm a Data Analyst with 3+ years of professional experience, transitioning into <strong>Machine Learning Engineering</strong> through deliberate, hands-on project work. My background spans fintech and real estate analytics.",
+    "I build end-to-end ML pipelines in <strong>Python</strong> using PyTorch, HuggingFace Transformers, XGBoost, and Scikit-learn. I deploy with <strong>FastAPI, Docker, and AWS</strong>, and track experiments with MLflow.",
+    "My immediate target is an <strong>ML Engineering role at a Nigerian fintech</strong> — Moniepoint, Kuda, Carbon, or Branch — using that as the launchpad for international remote roles.",
   ],
 
   /* ── Roadmap ────────────────────────────────────────── */
@@ -713,14 +713,26 @@ const CONFIG = {
   ],
 
   /* ── Projects ───────────────────────────────────────── */
-  // status: "deployed" | "progress" | "complete"
-  // featured: true makes the card span 2 columns (use for your best project)
-  // metrics: array of { val, key } — pull your real numbers
   projects: [
+    {
+      title:    "NaijaSenti — Multilingual Nigerian Sentiment Analysis",   /* UPDATED: now featured */
+      status:   "deployed",
+      featured: true,                                                       /* UPDATED */
+      desc:     "Four-language NLP system benchmarking classical and deep learning models on low-resource African languages — Hausa, Igbo, Yorùbá, and Nigerian Pidgin. Diagnosed and resolved train/test leakage and Pidgin neutral-class collapse caused by data scarcity. Deployed live demo to Hugging Face Spaces.",
+      metrics:  [
+        { val: "0.74",  key: "AfroXLMR F1" },
+        { val: "0.69",  key: "LogReg F1" },
+        { val: "0.69",  key: "RNN F1" },
+        { val: "4",     key: "Languages" },
+      ],
+      stack:    ["PyTorch", "TensorFlow/Keras", "HuggingFace", "AfroXLMR", "LSTM", "RNN", "Scikit-learn"],
+      github:   "https://github.com/KingsleyElo/naija-sentiment",
+      demo:     "https://huggingface.co/spaces/KingsleyElo/naija-sentiment",
+    },
     {
       title:    "Nigerian Credit Risk — Deployed ML System",
       status:   "deployed",
-      featured: true,
+      featured: false,                                                      /* UPDATED */
       desc:     "End-to-end probability-of-default model for Nigerian fintech lending decisions. Trained on 100,000 loan records with leakage-free feature engineering, class imbalance handling, and SQL-based credit features. Deployed as a REST API with Flask, containerised with Docker and served via Gunicorn.",
       metrics:  [
         { val: "0.7223", key: "AUC" },
@@ -732,19 +744,14 @@ const CONFIG = {
       demo:     "https://drive.google.com/file/d/1WFAJApfDQSOcHNy5521vHgrSPuFtHQ7e/view?usp=sharing",
     },
     {
-      title:    "NaijaSenti — Nigerian Twitter Sentiment Analysis",
-      status:   "deployed",
+      title:    "Fraud Detection System",                                   /* UPDATED: new project */
+      status:   "progress",
       featured: false,
-      desc:     "Four-model NLP comparison on Nigerian Twitter data across Hausa, Igbo, Pidgin, and Yorùbá. Benchmarks Logistic Regression, SimpleRNN, and LSTM against fine-tuned AfroXLMR transformer. Includes rigorous data leakage detection and language-specific preprocessing.",
-      metrics:  [
-        { val: "0.74",  key: "AfroXLMR F1" },
-        { val: "0.69",  key: "LogReg F1" },
-        { val: "0.69",  key: "RNN F1" },
-        { val: "4",     key: "Languages" },
-      ],
-      stack:    ["PyTorch", "TensorFlow/Keras", "HuggingFace", "AfroXLMR", "LSTM", "RNN"],
-      github:   "https://github.com/KingsleyElo/naija-sentiment",
-      demo:     "https://huggingface.co/spaces/KingsleyElo/naija-sentiment",
+      desc:     "Real-time transaction fraud detection pipeline on the IEEE-CIS dataset. MLP classifier built in PyTorch, served via FastAPI, deployed to AWS Lambda with experiment tracking via MLflow.",
+      metrics:  [],
+      stack:    ["Python", "PyTorch", "FastAPI", "AWS Lambda", "MLflow", "Docker"],
+      github:   "https://github.com/KingsleyElo",
+      demo:     "",
     },
     {
       title:    "Nigeria Housing Price Prediction",
@@ -752,24 +759,15 @@ const CONFIG = {
       featured: false,
       desc:     "Compares manual Ridge regression (closed-form linear algebra) against a full Scikit-learn pipeline with StandardScaler and 5-fold cross-validated hyperparameter tuning. Demonstrates why proper scaling and CV-tuned regularisation matter in production.",
       metrics:  [
-        { val: "0.67",  key: "Best RMSE" },
-        { val: "24%",   key: "RMSE Improvement" },
+        { val: "0.67",   key: "Best RMSE" },
+        { val: "24%",    key: "RMSE Improvement" },
         { val: "5-fold", key: "Cross-val" },
       ],
       stack:    ["Scikit-learn", "NumPy", "Pandas", "GridSearchCV", "Ridge Regression"],
       github:   "https://github.com/KingsleyElo/Nigeria-Housing-Price-Prediction",
       demo:     "",
     },
-    {
-      title:    "Boston Housing Regression",
-      status:   "complete",
-      featured: false,
-      desc:     "Foundational regression benchmark and EDA. Explores feature importance, regularisation techniques, and model evaluation. Companion EDA notebook extends analysis to identify the top 5 features driving median housing values.",
-      metrics:  [],
-      stack:    ["Scikit-learn", "Python", "Pandas", "Matplotlib", "Seaborn"],
-      github:   "https://github.com/KingsleyElo/Boston_Housing_Regression",
-      demo:     "",
-    },
+    /* Boston Housing removed */                                            /* UPDATED */
   ],
 
   /* ── Skills ─────────────────────────────────────────── */
@@ -779,8 +777,8 @@ const CONFIG = {
       tags:  ["Scikit-learn", "XGBoost", "Random Forest", "Logistic Regression", "Ridge/Lasso", "PyTorch", "TensorFlow/Keras", "LSTM", "RNN", "HuggingFace Transformers"],
     },
     {
-      group: "Deployment & MLOps",
-      tags:  ["Flask", "Docker", "Gunicorn", "REST APIs", "Apache Airflow", "MLflow (learning)", "AWS Lambda (learning)"],
+      group: "Deployment & MLOps",                                         /* UPDATED: removed "(learning)" labels */
+      tags:  ["FastAPI", "Flask", "Docker", "AWS Lambda", "AWS Elastic Beanstalk", "S3", "MLflow", "REST APIs", "Gunicorn"],
     },
     {
       group: "Data Engineering",
@@ -954,7 +952,7 @@ $('nav-resume').href = CONFIG.resume;
 /* ── Hero ───────────────────────────────────────────────────── */
 $('hero-tag').textContent = `${CONFIG.role} — ${CONFIG.location}`;
 $('hero-name').innerHTML = `${CONFIG.name.split(' ')[0]}<br>${CONFIG.name.split(' ').slice(1).join(' ')}<span>${CONFIG.tagline}</span>`;
-$('hero-desc').innerHTML = `Building <strong>production ML systems</strong> for Nigerian fintech — credit risk, NLP, and fraud detection. Deploying with Flask, Docker, and cloud infrastructure.`;
+$('hero-desc').innerHTML = `Building <strong>production ML pipelines</strong> across NLP and financial services — from feature engineering and model development to deployment. My focus is production-ready work, not just notebooks.`; /* UPDATED */
 $('hero-projects').href = '#projects';
 
 $('hero-stats').innerHTML = CONFIG.stats.map(s => `
